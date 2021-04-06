@@ -1,0 +1,41 @@
+.slider {
+
+    &-str {
+        border: 1px solid var(--gray_contur);
+        background-color: var(--background);
+        opacity: 1;
+        transition: all .3s;
+        height: 40px;
+        width: 28px;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+
+        &_disabled {
+            opacity: .5;
+            cursor: default;
+        }
+        &__prev:before,
+        &__next:before {
+            content: '';
+            border: 5px solid transparent;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0, -50%);
+        }
+        &__prev:before {
+            border-right: 8px solid var(--blacksuper);
+            margin: 0 0 0 -10px;
+        }
+        &__next:before {
+            border-left: 8px solid var(--blacksuper);
+            margin: 0 0 0 -3px;
+        }
+    }
+}

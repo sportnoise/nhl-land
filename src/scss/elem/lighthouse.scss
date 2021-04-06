@@ -1,0 +1,33 @@
+.lighthouse-label {
+    background-color: var(--black);
+    line-height: 14px;
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 13px;
+    letter-spacing: .2px;
+    padding: 0 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 16px;
+    z-index: 2;
+
+    &_lg {
+        font-size: 15px;
+        line-height: 24px;
+        height: 26px;
+        border-radius: 13px;
+    }
+    &_xl {
+        font-size: 15px;
+        line-height: 28px;
+        height: 30px;
+        border-radius: 15px;
+        padding: 0 15px;
+    }
+    &_no-abs {
+        position: static;
+        top: auto;
+        left: auto;
+    }
+}

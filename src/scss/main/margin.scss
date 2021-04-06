@@ -1,0 +1,6 @@
+@for $i from 0 through 12
+{
+    .mb-#{$i * 5} {
+        margin-bottom: #{$i * 5}px !important;
+    }
+}

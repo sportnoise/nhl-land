@@ -1,0 +1,75 @@
+.photo-index {
+    padding: 0 0 50px;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__item {
+        width: calc(100% / 3);
+        margin: 0 0 30px;
+        padding: 0 15px;
+    }
+    &__items_small .photo-index__item {
+        width: 25%;
+    }
+    &__pict {
+        display: block;
+        position: relative;
+        margin: 0 0 15px;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+    }
+    &__name {
+        color: var(--black);
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: .23px;
+        margin: 0 0 10px;
+        display: block;
+
+        &:hover {
+            color: var(--black);
+        }
+    }
+    &__place,
+    &__date {
+        color: var(--link);
+        font-size: 13px;
+        line-height: 17px;
+        letter-spacing: .2px;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-link {
+            font-size: 15px;
+            margin: 0 30px 0 0;
+            color: var(--link);
+
+            &:hover {
+                color: var(--black);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-between(sm, md)
+{
+    .photo-index__items_small .photo-index__item {
+        width: 50%;
+    }
+}
+@include media-breakpoint-only(xs)
+{
+    .photo-index__item,
+    .photo-index__items_small .photo-index__item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+.letters-panel {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 440px;
+    margin: 0 0 10px;
+
+    &__link {
+        font-size: 19px;
+        font-weight: 600;
+        color: var(--link);
+        margin: 0 15px 10px 0;
+        line-height: 1;
+
+        &:hover,
+        &_active {
+            color: var(--black);
+            text-decoration: none;
+        }
+    }
+}

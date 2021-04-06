@@ -1,0 +1,27 @@
+.title-icon {
+    margin: 0 0 35px;
+
+    &__pict {
+        display: none;
+    }
+
+    @include media-breakpoint-only(xl)
+    {
+        & {
+            position: relative;
+
+            &__pict {
+                position: absolute;
+                left: -105px;
+                width: 105px;
+                top: 50%;
+                transform: translate(0, -50%);
+                display: block;
+            }
+            &__img {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}

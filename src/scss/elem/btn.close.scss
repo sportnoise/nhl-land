@@ -1,0 +1,65 @@
+.btn-close {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+
+    &:after,
+    &:before {
+        content: "";
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        transition: all .3s;
+        top: 10px;
+        left: -5px;
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+
+    &_white {
+
+        &:after,
+        &:before {
+            background-color: var(--white);
+        }
+        &:hover {
+
+            &:after,
+            &:before {
+                background-color: var(--link);
+            }
+        }
+    }
+    &_dark {
+
+        &:after,
+        &:before {
+            background-color: var(--link);
+        }
+        &:hover {
+
+            &:after,
+            &:before {
+                background-color: var(--black);
+            }
+        }
+    }
+    &_grey {
+
+        &:after,
+        &:before {
+            background-color: var(--gray_contur);
+        }
+        &:hover {
+
+            &:after,
+            &:before {
+                background-color: var(--link);
+            }
+        }
+    }
+}

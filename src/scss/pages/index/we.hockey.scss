@@ -1,0 +1,124 @@
+.we-hockey {
+    padding: 0 0 75px;
+    text-align: center;
+
+    &__block {
+        background: url(img/bg.we.hockey.jpg) no-repeat center / cover;
+        color: var(--white);
+        padding: 30px 110px;
+        border-radius: 10px;
+        position: relative;
+
+        &:before {
+            content: "";
+            background: url(img/bg.we.hockey.top.png) no-repeat center /cover;
+            width: 224px;
+            height: 134px;
+            position: absolute;
+            right: 65px;
+            top: -30px;
+            z-index: 1;
+        }
+        &:after {
+            content: "";
+            background: url(img/bg.we.hockey.bottom.png) no-repeat center /cover;
+            width: 242px;
+            height: 150px;
+            position: absolute;
+            left: 160px;
+            bottom: -30px;
+            z-index: 1;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -.15px;
+        margin: 0 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+    &__desc {
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: .2px;
+        margin: 0 0 30px;
+        position: relative;
+        z-index: 2;
+    }
+    &__table {
+        font-size: 14px;
+        line-height: 19px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+
+        & th {
+            padding: 0 5px 15px;
+        }
+        & td {
+            padding: 7px 5px;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+    &__xl {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+        letter-spacing: -.15px;
+    }
+    &__lg {
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: .2px;
+    }
+
+    @include media-breakpoint-between(md, lg)
+    {
+        &__block {
+            padding: 50px 25px;
+        }
+    }
+    @include media-breakpoint-down(sm)
+    {
+        &__block {
+            padding: 35px 15px;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+        &__inner {
+            overflow-x: auto;
+        }
+        &__table {
+
+            & th {
+                padding: 0 10px 15px;
+            }
+            & td {
+                padding: 7px 10px;
+            }
+        }
+    }
+    @include media-breakpoint-only(sm)
+    {
+        &__block {
+            margin: 0 -15px;
+            border-radius: 0;
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &__desc {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.tags-block {
+    display: flex;
+    justify-content: space-between;
+    max-width: 555px;
+    margin: 0 0 50px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% - 50px);
+    }
+    &__item {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: .2px;
+        margin: 0 15px 5px 0;
+    }
+}

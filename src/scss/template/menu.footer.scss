@@ -1,0 +1,44 @@
+.menu-footer {
+    line-height: 17px;
+    margin: 0 0 40px;
+
+    &__title {
+        color: var(--white_contur);
+        font-size: 15px;
+        font-weight: 600;
+    }
+    &__link {
+        font-size: 13px;
+        display: block;
+        color: var(--white_contur);
+        margin: 10px 0 0;
+
+        &:hover {
+            color: var(--white_contur);
+            text-decoration: underline;
+        }
+    }
+
+    @include media-breakpoint-only(md)
+    {
+        & {
+            width: 25%;
+        }
+    }
+    @include media-breakpoint-down(sm)
+    {
+        & {
+            flex-wrap: wrap;
+            display: flex;
+            line-height: 27px;
+            margin: 0 0 30px;
+
+            &__link {
+                font-size: 17px;
+                color: var(--white);
+                margin: 0 0 25px;
+                width: 50%;
+            }
+        }
+    }
+}

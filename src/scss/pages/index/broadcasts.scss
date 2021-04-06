@@ -1,0 +1,123 @@
+.broadcasts-index {
+    background-color: var(--black);
+    padding: 60px 0 45px;
+    margin: 0 0 70px;
+
+    &-top {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        &__item {
+            width: 25%;
+            margin: 0 0 30px;
+            padding: 0 15px;
+        }
+        &__pict {
+            display: block;
+            position: relative;
+            margin: 0 0 15px;
+        }
+        &__img {
+            display: block;
+            width: 100%;
+        }
+        &__name {
+            color: var(--white);
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: .23px;
+            margin: 0 0 10px;
+            display: block;
+
+            &:hover {
+                color: var(--link);
+            }
+        }
+        &__place,
+        &__date {
+            color: var(--link);
+            font-size: 13px;
+            line-height: 17px;
+            letter-spacing: .2px;
+        }
+    }
+    &-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        &__item {
+            width: calc(100% / 6);
+            margin: 0 0 30px;
+            padding: 0 15px;
+        }
+        &__pict {
+            display: block;
+            position: relative;
+            margin: 0 0 15px;
+        }
+        &__img {
+            display: block;
+            width: 100%;
+        }
+        &__name {
+            color: var(--white);
+            font-size: 13px;
+            line-height: 17px;
+            letter-spacing: .2px;
+            margin: 0 0 10px;
+            display: block;
+
+            &:hover {
+                color: var(--link);
+            }
+        }
+        &__place,
+        &__date {
+            color: var(--link);
+            font-size: 13px;
+            line-height: 17px;
+            letter-spacing: .2px;
+        }
+    }
+    &__links {
+        text-align: right;
+    }
+
+    @include media-breakpoint-only(xl)
+    {
+        &-bottom__item {
+            margin: 0 0 10px;
+        }
+    }
+    @include media-breakpoint-between(md, lg)
+    {
+        &-bottom__item {
+            width: calc(100% / 3);
+        }
+    }
+    @include media-breakpoint-between(sm, md)
+    {
+        &-top__item {
+            width: 50%;
+        }
+    }
+    @include media-breakpoint-only(sm)
+    {
+        &-bottom__item {
+            width: 50%;
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            margin: 0 0 50px;
+
+            &-top__item,
+            &-bottom__item {
+                width: 100%;
+            }
+        }
+    }
+}

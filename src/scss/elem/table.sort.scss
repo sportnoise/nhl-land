@@ -1,0 +1,35 @@
+.table-sort {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+
+    &_no-padding {
+        left: 0;
+        right: 0;
+    }
+    &:after,
+    &:before {
+        content: "";
+        border: 5px solid transparent;
+        width: 0;
+        height: 0;
+        position: relative;
+        display: inline-block;
+    }
+    &:after {
+        border-top: 8px solid var(--gray_contur);
+        top: 2px;
+    }
+    &:before {
+        border-bottom: 8px solid var(--gray_contur);
+        top: -2px;
+    }
+    .sorting_asc &:before {
+        border-bottom-color: var(--blacksuper);
+    }
+    .sorting_desc &:after {
+        border-top-color: var(--blacksuper);
+    }
+}

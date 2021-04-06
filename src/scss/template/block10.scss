@@ -1,0 +1,43 @@
+.logo10-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 230px;
+
+    @include media-breakpoint-down(sm)
+    {
+        & {
+            height: 255px;
+        }
+    }
+}
+
+.block10-center {
+    max-width: 1420px;
+    margin: 0 auto;
+    background-color: var(--background);
+
+    &__margin {
+        height: 20px;
+    }
+}
+
+.block10-tags {
+    background: url(img/bg.logos.jpg) no-repeat center / cover;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+        display: block;
+        margin: auto;
+    }
+
+    @include media-breakpoint-down(xs)
+    {
+        & {
+            margin: -30px 0 20px;
+        }
+    }
+}

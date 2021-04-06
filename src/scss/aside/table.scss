@@ -1,0 +1,42 @@
+.aside-table {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 30px;
+
+    th {
+        font-weight: 400;
+        color: var(--link);
+    }
+    td, th {
+        padding: 0 0 0 10px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            text-align: left;
+        }
+        &:nth-child(1) {
+            width: 15px;
+            padding: 0;
+        }
+    }
+    &__name {
+        max-width: 155px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &_short &__name {
+        max-width: 200px;
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        &__name {
+            max-width: 70px;
+        }
+        &_short &__name {
+            max-width: 100px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.h1-and-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 40px;
+
+    @include media-breakpoint-down(md)
+    {
+        & {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
+}

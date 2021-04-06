@@ -1,0 +1,35 @@
+.aside-article {
+
+    &__item {
+        margin: 0 0 20px;
+        padding: 0 0 0 15px;
+        position: relative;
+        letter-spacing: .2px;
+        font-size: 13px;
+        line-height: 17px;
+
+        &:before {
+            content: "";
+            height: 6px;
+            width: 6px;
+            background-color: var(--black);
+            position: absolute;
+            transform: rotate(45deg);
+            left: 0;
+            top: 6px;
+        }
+    }
+    &__name {
+        color: var(--blacksuper);
+        display: block;
+        margin: 0 0 5px;
+
+        &:hover {
+            color: var(--blacksuper);
+        }
+    }
+    &__date,
+    &__place {
+        color: var(--link);
+    }
+}

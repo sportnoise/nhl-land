@@ -1,0 +1,19 @@
+.title-book {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 25px;
+
+    &__link {
+        stroke: var(--gray_contur);
+
+        &:hover {
+            stroke: var(--black);
+        }
+    }
+    &__icon {
+        width: 26px;
+        height: 24px;
+        fill: none;
+    }
+}

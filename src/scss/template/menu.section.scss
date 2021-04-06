@@ -1,0 +1,52 @@
+.menu-section {
+    padding: 20px 0 15px;
+
+    &__block {
+        display: flex;
+        overflow-y: auto;
+    }
+    &__link {
+        color: var(--black);
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: .23px;
+        margin: 0 20px 5px 0;
+        position: relative;
+        color: var(--link);
+        white-space: nowrap;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            height: 2px;
+            width: 0;
+            background-color: var(--black);
+            left: 50%;
+            transform: translate(-50%, 0);
+            transition: all .3s;
+        }
+        &_active {
+            font-weight: 600;
+        }
+        &:hover,
+        &_active {
+            color: var(--black);
+            text-decoration: none;
+
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(xl)
+{
+    .menu-section {
+
+        &__block {
+            margin: 0 0 0 105px;
+        }
+    }
+}

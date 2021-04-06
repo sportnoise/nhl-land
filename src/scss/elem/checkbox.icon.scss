@@ -1,0 +1,37 @@
+.checkbox-icon {
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+
+    &__label {
+        position: relative;
+    }
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+    &__icon {
+        height: 13px;
+        margin: 0 5px;
+        fill: var(--gray_contur);
+        cursor: pointer;
+        transition: all .3s;
+
+        &_f {
+            width: 36px;
+        }
+        &_lm {
+            width: 30px;
+        }
+        &_ln {
+            width: 27px;
+        }
+        &_kch {
+            width: 27px;
+        }
+    }
+    &__icon:hover,
+    &__input:checked + &__icon {
+        fill: var(--black);
+    }
+}

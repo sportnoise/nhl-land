@@ -1,0 +1,79 @@
+@include media-breakpoint-up(md)
+{
+    .menu-top {
+        display: flex;
+
+        &__close {
+            display: none;
+        }
+        &__link {
+            color: var(--black);
+            padding: 5px 10px;
+            margin: 0;
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 22px;
+
+            &:hover {
+                background-color: var(--background);
+                color: var(--link);
+                text-decoration: none;
+            }
+            &:last-child {
+                margin: 0;
+            }
+            &_active {
+                background-color: var(--background);
+                color: var(--link);
+                position: relative;
+                margin-bottom: -10px;
+                border-radius: 4px 4px 0 0;
+            }
+        }
+    }
+}
+@include media-breakpoint-only(lg)
+{
+    .menu-top {
+
+        &__link {
+            font-size: 14px;
+            padding: 5px;
+        }
+    }
+}
+@include media-breakpoint-only(md)
+{
+    .menu-top {
+        margin: 0 -10px;
+        justify-content: space-between;
+
+        &__link {
+            font-size: 14px;
+            padding: 5px;
+        }
+    }
+}
+@include media-breakpoint-down(sm)
+{
+    .menu-top {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 75px;
+        font-size: 28px;
+        font-weight: 600;
+        color: var(--blacksuper);
+        line-height: 1;
+        margin: 0 0 40px;
+
+        &__link {
+            margin: 0 0 20px;
+            color: var(--link);
+
+            &:hover {
+                color: var(--link);
+                text-decoration: none;
+            }
+        }
+    }
+}

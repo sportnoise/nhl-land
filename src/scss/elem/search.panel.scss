@@ -1,0 +1,51 @@
+.search-panel {
+
+    &__form {
+        position: relative;
+        margin: 0 0 45px;
+    }
+    &__input {
+        border: 3px solid var(--white_contur);
+        height: 56px;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 19px;
+        color: var(--blacksuper);
+        padding: 0 65px 0 20px;
+        transition: all .3s;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            border-color: var(--gray_contur);
+        }
+    }
+    &__submit {
+        position: absolute;
+        right: 25px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: all .3s;
+        stroke: var(--link);
+
+        &:hover {
+            stroke: var(--black);
+        }
+        &-icon {
+            width: 19px;
+            height: 21px;
+            fill: transparent;
+        }
+    }
+    &__label {
+        font-size: 13px;
+        color: var(--link);
+        line-height: 17px;
+        position: absolute;
+        bottom: -25px;
+        left: 22px;
+    }
+}

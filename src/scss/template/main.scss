@@ -1,0 +1,87 @@
+.main-body {
+
+    &:after {
+        content: '';
+        opacity: 0;
+        transition: all .3s;
+    }
+    &_shadow:after {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: var(--blacksuper);
+        z-index: 100;
+        opacity: .3;
+    }
+}
+
+.white-block,
+.black-block {
+    padding: 35px 35px 45px 105px;
+    border-radius: 4px;
+
+    @include media-breakpoint-down(lg)
+    {
+        & {
+            padding: 30px 20px;
+        }
+    }
+}
+
+.white-block {
+    background-color: var(--white);
+}
+
+.black-block {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.white-bg {
+    background-color: var(--white);
+    padding: 35px 0 80px;
+
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            padding: 30px 0;
+        }
+    }
+}
+
+.grey-bg {
+    background-color: var(--blacksuper);
+    padding: 60px 0;
+
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            padding: 0;
+        }
+    }
+}
+
+.bg-bg {
+    background-color: var(--background);
+    padding: 10px 40px;
+
+    @include media-breakpoint-down(lg)
+    {
+        & {
+            padding: 10px 20px;
+        }
+    }
+}
+
+.block-padding {
+    padding: 30px 0 0;
+
+    @include media-breakpoint-only(xl)
+    {
+        & {
+            padding: 50px 0 0 105px;
+        }
+    }
+}

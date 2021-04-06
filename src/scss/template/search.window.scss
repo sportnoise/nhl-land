@@ -1,0 +1,33 @@
+.search-window {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    display: none;
+    top: 190px;
+    z-index: 101;
+
+    &__block {
+        position: relative;
+    }
+    &__inner {
+        margin: 0 75px;
+    }
+    &__close {
+        right: 0;
+        top: 0;
+    }
+
+    @include media-breakpoint-only(xl)
+    {
+        &__close {
+            right: 35px;
+        }
+    }
+    @include media-breakpoint-down(lg)
+    {
+        &__inner {
+            margin: 0 45px 0 0;
+        }
+    }
+}

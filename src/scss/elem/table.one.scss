@@ -1,0 +1,125 @@
+.table-one-visible {
+    overflow-y: auto;
+}
+
+.table-one {
+    min-width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+
+    tr {
+        border-bottom: 1px solid var(--gray_contur);
+
+        &:last-child {
+            border: none;
+        }
+    }
+    td, th {
+        position: relative;
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    th {
+        padding: 0 5px;
+        font-weight: normal;
+        color: var(--link);
+    }
+    td {
+        padding: 15px 5px;
+    }
+    &_center {
+
+        td, th {
+            text-align: center;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+    &_hover-bold tr:hover {
+        font-weight: 600;
+    }
+    &__tr-active:hover {
+        color: var(--black);
+        cursor: pointer;
+    }
+    &__sort {
+        height: auto !important;
+        vertical-align: top;
+        border: none !important;
+    }
+    &__rotate {
+        transform: rotate(-90deg) translate(0, -50%);
+        display: block;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform-origin: 0 0;
+    }
+    &__text-left {
+        text-align: left !important;
+    }
+    &__text-center {
+        text-align: center !important;
+    }
+    &__num {
+        position: absolute;
+        left: -45px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    &__small {
+        color: var(--blacksuper);
+        font-size: 13px;
+        line-height: 17px;
+    }
+    &__light {
+        color: var(--link);
+    }
+    &__big {
+        font-size: 17px;
+        line-height: 24px;
+    }
+    &__bold {
+        font-weight: 600 !important;
+    }
+
+    @include media-breakpoint-down(lg)
+    {
+        &__num {
+            display: none;
+        }
+    }
+    @include media-breakpoint-down(md)
+    {
+        &__sort {
+            display: none;
+        }
+    }
+    @include media-breakpoint-down(md)
+    {
+        tr {
+            height: auto;
+        }
+        td,
+        th {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &_head-sort th {
+        padding-bottom: 30px;
+        cursor: pointer;
+        min-width: 30px;
+    }
+    &_head-sort &__rotate {
+        bottom: 10px;
+    }
+}

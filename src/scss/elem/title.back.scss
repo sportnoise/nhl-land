@@ -1,0 +1,38 @@
+.title-back {
+    position: relative;
+
+    @include media-breakpoint-only(xl)
+    {
+        &__back {
+            stroke: var(--link);
+            position: absolute;
+            top: 50%;
+            left: -75px;
+            transform: translate(0, -50%);
+
+            &:hover {
+                stroke: var(--black);
+            }
+            &-icon {
+                fill: none;
+                width: 22px;
+                height: 13px;
+                transition: all .3s;
+                position: relative;
+                transform: rotate(180deg);
+                display: block;
+                left: 0;
+                transition: all .3s;
+            }
+            &:hover &-icon {
+                left: -10px;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg)
+    {
+        &__back {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+// Основное
+@import "./main/fonts"; // Шрифты
+@import "./main/variables"; // Переменные
+@import "./main/grid"; // Сетка
+@import "./main/reboot"; // Сброс стилей
+@import "./main/margin"; // Отступы
+
+// Библиотеки
+@import '~@fancyapps/fancybox/dist/jquery.fancybox.min.css'; // Fancybox
+@import "./lib/swiper"; // Общие стили сайдера
+@import "./lib/datepicker"; // Календарь
+@import "./lib/data.tables"; // Сортируемые таблицы
+@import "./lib/jquery.jscrollpane"; // Полоса прокрутки
+@import "./lib/tippy"; // Подсказки
+@import "./lib/photobox"; // Слайдер фото
+
+// Общие элементы
+@import "./elem/elem"; // Незначительные элементы
+@import "./elem/pict.shadow"; // Тень на картинках
+@import "./elem/btn"; // Кнопки
+@import "./elem/btn.close"; // Кнопка закрыть
+@import "./elem/link.str"; // Ссылка со стрелкой
+@import "./elem/rss"; // Иконка RSS
+@import "./elem/block.title"; // Заголовки блоков
+@import "./elem/title.back"; // Ссылка назад в заголовках
+@import "./elem/title.icon"; // Иконка в заголовках
+@import "./elem/lighthouse"; // Маяк
+@import "./elem/icons"; // Иконки
+@import "./elem/tabs"; // Вкладки
+@import "./elem/h1.and.link"; // H1 с ссылкой
+@import "./elem/accordion"; // Аккордеон
+@import "./elem/table.sort"; // Сортировка таблиц
+@import "./elem/table.one"; // Таблица №1
+@import "./elem/table.slider"; // Слайдер в таблице
+@import "./elem/checkbox.icon"; // Чекбоксы в виде иконок
+@import "./elem/select.btn"; // Селекты в виде кнопок
+@import "./elem/select.style"; // Селекты обычные
+@import "./elem/file.input"; // Поле выбора файла
+@import "./elem/filter.panel"; // Панель фильтров
+@import "./elem/search.panel"; // Панель фильтров
+@import "./elem/letters.panel"; // Поиск во буквам
+@import "./elem/panel.btn"; // Панель кнопок
+@import "./elem/panel.rubric"; // Панель рубрик
+@import "./elem/page.navigation"; // Постраничная навигация
+@import "./elem/form.one"; // Стиль формы №1
+@import "./elem/form.two"; // Стиль формы №2
+@import "./elem/tags.block"; // Облако тегов
+@import "./elem/share.block"; // Поделиться
+@import "./elem/slider.str"; // Копки вперед/назад для слайдера в таблице и чемпионате
+@import "./elem/title.book"; // Заголовок с книжкой
+@import "./elem/hide.text"; // Текст скрытый градиентом
+@import "./elem/now.air"; // Сейчас в эфире
+
+// Шаблон
+@import "./template/block10"; // Дополнительные стили к 10 сезон
+@import "./template/region.selection"; // Выбор региона
+@import "./template/region.select"; // Окно выбора региона
+@import "./template/header"; // Шапка сайта
+@import "./template/search.window"; // Окно поиска
+@import "./template/search.form"; // Форма поиска
+@import "./template/menu.top"; // Главное меню
+@import "./template/menu.top.btn"; // Главное меню
+@import "./template/main"; // Рабочая область
+@import "./template/menu.section"; // Меню раздела
+@import "./template/footer"; // Подвал сайта
+@import "./template/face.line"; // Полоса с лицами
+@import "./template/menu.footer"; // Меню подвала
+@import "./template/window"; // Всплывающие окна
+@import "./template/menu.mobile"; // Меню на мобильнике
+
+// Главная страница
+@import "./pages/index/slider"; // Главный слайдер
+@import "./pages/index/match"; // Матчи
+@import "./pages/index/tournament.table"; // Турнирная таблица
+@import "./pages/index/news"; // Новости
+@import "./pages/index/info"; // Информация
+@import "./pages/index/leader"; // Лидеры
+@import "./pages/index/broadcasts"; // Прямые трансляции
+@import "./pages/index/video"; // Видео
+@import "./pages/index/photo"; // Альбомы
+@import "./pages/index/we.hockey"; // Мы — хоккейная страна

@@ -1,0 +1,125 @@
+/* Черные ссылки */
+.black-link {
+
+    a {
+        color: var(--black);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Position relative */
+.position-relative {
+    position: relative;
+}
+
+/* Размеры текстов */
+.text-lg {
+    font-size: 19px;
+    line-height: 27px;
+    letter-spacing: .19px;
+}
+.text-sm {
+    font-size: 15px;
+    line-height: 27px;
+}
+.text-xs {
+    font-size: 13px;
+    line-height: 17px;
+}
+
+/* Фон в звездочках */
+.bg-star {
+    background: url(img/bg.star.jpg) repeat left top;
+}
+
+/* Светлый текст */
+.color-link {
+    color: var(--link);
+}
+
+/* Узкий текстовый блок */
+.block-width-lg {
+    max-width: 705px;
+}
+.block-width-md {
+    max-width: 630px;
+}
+.block-width-sm {
+    max-width: 600px;
+}
+.block-width-xs {
+    max-width: 580px;
+}
+
+/* Выделение фона текста */
+.text-bg {
+    background-color: var(--text-bg);
+}
+
+/* Вопрос/Ответ в тексте */
+.question-block {
+    margin: 50px 0 0;
+
+    &__question {
+        font-weight: 600;
+        margin: 0 0 20px;
+    }
+    &__answer {
+        margin: 0 0 35px;
+    }
+}
+
+/* Материал по теме */
+.on-topic {
+    font-size: 15px;
+    line-height: 20px;
+    width: 230px;
+    background-color: var(--background);
+    float: left;
+    margin: 5px 25px 5px -105px;
+    padding: 20px 20px 30px;
+
+    &__title {
+        padding: 0 0 15px;
+    }
+    &__pict {
+        display: block;
+        margin: 0 0 15px;
+    }
+    &__img {
+        display: block;
+    }
+    &__name {
+        font-weight: 600;
+        display: block;
+        color: var(--black);
+
+        &:hover {
+            color: var(--blacksuper);
+        }
+    }
+
+    @include media-breakpoint-down(lg)
+    {
+        & {
+            margin: 5px 25px 5px -20px;
+        }
+    }
+    @include media-breakpoint-only(xs)
+    {
+        & {
+            margin: 0 0 20px 0;
+            float: none;
+            padding: 20px;
+        }
+    }
+}
+
+/* Нашли ошибку */
+.find-error {
+    max-width: 270px;
+    margin: 40px 0;
+}

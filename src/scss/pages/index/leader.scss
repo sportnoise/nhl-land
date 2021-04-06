@@ -1,0 +1,299 @@
+.leader-index {
+    margin: 0 0 55px;
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        border-radius: 4px;
+        width: 100%;
+        margin: 0 15px 30px;
+
+        &_left {
+            background-image: url(img/bg.leader.left.jpg);
+        }
+        &_center {
+            background-image: url(img/bg.leader.center.jpg);
+        }
+        &_right {
+            background-image: url(img/bg.leader.right.jpg);
+        }
+    }
+    &__bottom {
+        margin: 15px 80px 20px 0;
+    }
+
+    @include media-breakpoint-up(lg)
+    {
+        &__item {
+            width: calc(100% / 3 - 30px);
+        }
+    }
+    @include media-breakpoint-only(md)
+    {
+        &__item {
+
+            &_center,
+            &_right {
+                width: calc(50% - 30px);
+            }
+        }
+    }
+    @include media-breakpoint-down(sm)
+    {
+        & {
+            margin: 0 0 15px;
+
+            &__item {
+                padding: 0 0 30px;
+            }
+            &__part {
+                margin: 0 10px 0 0;
+            }
+            &__bottom {
+                margin: 15px 15px 0 0;
+            }
+        }
+    }
+}
+
+.leader-one {
+    padding: 30px 50px 0 65px;
+    text-align: center;
+
+    &__pict {
+        margin: auto;
+        border-radius: 50%;
+        border: 8px solid var(--gray_contur);
+        height: 190px;
+        width: 190px;
+        overflow: hidden;
+    }
+    &__img {
+        display: block;
+    }
+    &__info {
+        width: 210px;
+        display: flex;
+        justify-content: space-between;
+        margin: -10px auto 10px;
+
+        &-left {
+            height: 54px;
+            width: 54px;
+            background-color: var(--blacksuper);
+            border-radius: 50%;
+            color: var(--white);
+            line-height: 54px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        &-right {
+            width: 54px;
+            line-height: 54px;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--blacksuper);
+        }
+    }
+    &__name {
+        color: var(--blacksuper);
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: -.14px;
+        margin: 0 0 10px;
+    }
+    &__desc {
+        margin: 0 0 35px;
+    }
+    &__bold {
+        font-weight: 600;
+        color: var(--blacksuper);
+        text-align: left;
+        letter-spacing: .26px;
+    }
+    &__text {
+        text-align: left;
+        letter-spacing: .23px;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0 0 20px;
+    }
+    &__line {
+        display: flex;
+        font-size: 15px;
+        margin: 55px 0 0;
+
+        &-bold {
+            font-size: 19px;
+            font-weight: bold;
+            margin: 0 20px 0 5px;
+        }
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        & {
+            padding: 20px 20px 0;
+
+            &__line-bold {
+                font-size: 17px;
+                margin: 0 15px 0 5px;
+            }
+        }
+    }
+    @include media-breakpoint-only(md)
+    {
+        & {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 50px;
+
+            &__right {
+                text-align: left;
+                padding: 0 0 0 30px;
+            }
+            &__name br {
+                display: none;
+            }
+            &__desc {
+                margin: 0 0 15px;
+            }
+            &__line {
+                margin: 0;
+            }
+        }
+    }
+    @include media-breakpoint-down(sm)
+    {
+        & {
+            padding: 30px 15px 0;
+        }
+    }
+}
+
+.leader-item {
+    padding: 20px 10px 0 50px;
+    display: flex;
+    align-items: center;
+
+    &__pict {
+        margin: auto;
+        border-radius: 50%;
+        border: 5px solid var(--gray_contur);
+        height: 105px;
+        width: 105px;
+        overflow: hidden;
+    }
+    &__img {
+        display: block;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin: -5px -10px 0;
+        line-height: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+
+        &-left {
+            height: 30px;
+            width: 30px;
+            background-color: var(--blacksuper);
+            border-radius: 50%;
+            color: var(--white);
+        }
+        &-right {
+            width: 30px;
+            color: var(--blacksuper);
+        }
+    }
+    &__right {
+        padding: 0 0 0 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &__name {
+        font-weight: 600;
+        margin: 0 0 5px;
+    }
+    &__text {
+        font-size: 13px;
+        line-height: 17px;
+        color: var(--link);
+        margin: 0 0 5px;
+    }
+    &__line {
+        display: flex;
+    }
+    &__part {
+        margin: 0 15px 0 0;
+    }
+
+    &_small {
+
+        & .leader-item__pict {
+            border: 3px solid var(--gray_contur);
+            height: 77px;
+            width: 77px;
+        }
+        & .leader-item__info {
+            line-height: 25px;
+            font-size: 17px;
+
+            &-left {
+                height: 25px;
+                width: 25px;
+            }
+            &-right {
+                width: 25px;
+            }
+        }
+        & .leader-item__right {
+            padding: 0 0 0 40px;
+        }
+    }
+
+    @include media-breakpoint-only(lg)
+    {
+        & {
+            padding: 20px 10px 0 15px;
+
+            &__pict {
+                border: 3px solid var(--gray_contur);
+                height: 77px;
+                width: 77px;
+            }
+            &__info {
+                line-height: 25px;
+                font-size: 17px;
+                margin: -5px -5px 0;
+
+                &-left {
+                    height: 25px;
+                    width: 25px;
+                }
+            }
+            &__right {
+                padding: 0 0 0 20px;
+            }
+            &_small &__right {
+                padding: 0 0 0 20px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md)
+    {
+        & {
+            padding: 20px 10px 0 25px;
+        }
+    }
+}

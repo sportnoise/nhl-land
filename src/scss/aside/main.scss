@@ -1,0 +1,27 @@
+.aside-right {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .23px;
+    margin: 0 0 50px;
+
+    p {
+        margin: 0 0 8px;
+    }
+    hr {
+        height: 1px;
+        margin: 20px 0;
+    }
+
+    @include media-breakpoint-up(lg)
+    {
+        &_pt {
+            padding: 40px 0 0;
+        }
+    }
+    @include media-breakpoint-down(md)
+    {
+        & {
+            display: none;
+        }
+    }
+}

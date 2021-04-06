@@ -1,0 +1,43 @@
+.link-str {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    stroke: var(--link);
+    color: var(--link);
+
+    &:hover {
+        stroke: var(--black);
+        color: var(--black);
+        text-decoration: none;
+    }
+    &__icon {
+        fill: none;
+        width: 22px;
+        height: 13px;
+        margin: 0 0 0 15px;
+        transition: all .3s;
+        position: relative;
+        right: 0;
+    }
+    &:hover &__icon {
+        right: -10px;
+    }
+
+    &_white {
+        stroke: var(--white);
+        color: var(--white);
+
+        &:hover {
+            stroke: var(--link);
+            color: var(--link);
+        }
+    }
+
+    @include media-breakpoint-down(xs)
+    {
+        &__icon {
+            display: none;
+        }
+    }
+}

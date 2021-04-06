@@ -1,0 +1,16 @@
+.face-line {
+
+    &__wrapper {
+        transition-timing-function: linear;
+    }
+    &__img {
+        display: block;
+    }
+
+    @include media-breakpoint-down(sm)
+    {
+        & {
+            display: none;
+        }
+    }
+}
