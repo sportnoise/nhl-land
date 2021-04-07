@@ -1,3 +1,9 @@
+:root {
+    --paraphernalia-blue1: #20284e;
+    --paraphernalia-blue2: #1463d6;
+    --paraphernalia-blue3: #2992fd;
+}
+
 .logo10-center {
     display: flex;
     align-items: center;
@@ -19,6 +25,67 @@
 
     &__margin {
         height: 20px;
+    }
+}
+
+.block10-paraphernalia {
+    height: 100px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__btn {
+        background-image: linear-gradient(90deg,var(--paraphernalia-blue1),var(--paraphernalia-blue2));
+        height: 40px;
+        padding: 0 55px;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 0 27px var(--paraphernalia-blue3);
+
+        &:hover {
+            box-shadow: none;
+            text-decoration: none;
+            color: var(--white);
+        }
+    }
+
+    @include media-breakpoint-only(xl)
+    {
+        & {
+            max-width: 1420px;
+            padding: 0 50px;
+        }
+    }
+    @include media-breakpoint-only(lg)
+    {
+        &__word {
+            width: 300px;
+        }
+        &__head {
+            width: 400px;
+        }
+    }
+    @include media-breakpoint-only(md)
+    {
+        &__head {
+            display: none;
+        }
+    }
+    @include media-breakpoint-down(sm)
+    {
+        & {
+            height: auto;
+            flex-direction: column;
+            padding: 25px 15px;
+
+            &__head {
+                margin: 30px 0;
+            }
+        }
     }
 }
 
