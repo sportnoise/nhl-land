@@ -13,7 +13,7 @@
     @include media-breakpoint-down(sm)
     {
         & {
-            height: 255px;
+            display: none;
         }
     }
 }
@@ -29,13 +29,15 @@
 }
 
 .block10-paraphernalia {
-    height: 100px;
+    background: url(img/paraphernalia.bg.jpg) no-repeat center / cover;
     margin: auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
+    &__inner {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__btn {
         background-image: linear-gradient(90deg,var(--paraphernalia-blue1),var(--paraphernalia-blue2));
         height: 40px;
@@ -57,7 +59,11 @@
     {
         & {
             max-width: 1420px;
-            padding: 0 50px;
+
+            &__inner {
+                max-width: 100%;
+                padding: 0 50px;
+            }
         }
     }
     @include media-breakpoint-only(lg)
@@ -77,14 +83,19 @@
     }
     @include media-breakpoint-down(sm)
     {
-        & {
+        &__inner {
             height: auto;
             flex-direction: column;
-            padding: 25px 15px;
-
-            &__head {
-                margin: 30px 0;
-            }
+            padding: 5px 15px 0;
+        }
+        &__word {
+            max-width: 285px;
+        }
+        &__head {
+            margin: 5px 0 -20px;
+        }
+        &__btn {
+            display: none;
         }
     }
 }
@@ -105,6 +116,30 @@
     {
         & {
             margin: -30px 0 20px;
+        }
+    }
+}
+
+.block10-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 20px;
+
+    &__img {
+        width: 100%;
+    }
+
+    @include media-breakpoint-up(md)
+    {
+        & {
+            display: none;
+        }
+    }
+    @include media-breakpoint-only(sm)
+    {
+        &__img {
+            max-width: 510px;
         }
     }
 }
