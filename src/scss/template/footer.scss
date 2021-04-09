@@ -15,62 +15,42 @@
 
 .footer-partner-list {
     background-color: var(--white);
-    padding: 50px 0 45px;
+    padding: 40px 0 0;
 
     &__items {
         display: flex;
         justify-content: center;
         text-align: center;
+        flex-wrap: wrap;
+        max-width: 930px;
+        margin: auto;
     }
     &__item {
         width: 25%;
-        max-width: 245px;
-        color: var(--link);
-
-        &:hover {
-            color: var(--black);
-            text-decoration: none;
-        }
-    }
-    &__pict {
-        margin: 0 0 10px;
-        height: 80px;
         display: flex;
         align-items: center;
-    }
-    &__img {
-        display: block;
-        margin: auto;
-    }
-    &__name {
-        font-size: 13px;
-        line-height: 17px;
+        justify-content: center;
+        margin: 0 0 40px;
     }
 
-    @include media-breakpoint-down(sm)
+    @include media-breakpoint-only(md)
     {
-        & {
-            padding: 40px 0 15px;
-
-            &__items {
-                flex-wrap: wrap;
-            }
-            &__item {
-                width: 50%;
-                margin: 0 0 30px;
-            }
+        &__item {
+            width: 33.3%;
         }
     }
-    @include media-breakpoint-only(xs)
+    @include media-breakpoint-down(sm)
     {
         & {
             padding: 30px 0 0;
 
-            &__pict {
-                margin: 0;
+            &__items {
+                margin: 0 -10px;
             }
-            &__name {
-                display: none;
+            &__item {
+                width: 50%;
+                margin: 0 0 30px;
+                padding: 0 10px;
             }
         }
     }
